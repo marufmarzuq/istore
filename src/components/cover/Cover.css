@@ -1,0 +1,71 @@
+.cover > .container {
+    max-width: 1400px;
+}
+.slider-container {
+    width: 100%;
+    position: relative;
+    height: 575px;
+    color: white;
+    overflow: hidden;
+}
+.arrows {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.arrows > div {
+    cursor: pointer;
+    color: #ffffff4b;
+    padding: 0 10px;
+    transition: 0.3s;
+    z-index: 2;
+}
+.arrows > div:hover {
+    color: white;
+}
+.left-arrow {
+    margin-left: 9px;
+}
+.slider-wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+}
+.slider .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    height: 100%;
+}
+
+.slider-left {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+h2.slider-big-text {
+    font-size: 75px;
+    line-height: 75px;
+}
+p.slider-desc {
+    font-weight: 300;
+    padding-bottom: 15px;
+}
+button.cover-btn {
+    border: none;
+    padding: 15px 50px;
+    font-size: 18px;
+    mix-blend-mode: screen;
+    font-weight: 600;
+    cursor: pointer;
+}

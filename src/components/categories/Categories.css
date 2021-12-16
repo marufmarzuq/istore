@@ -1,0 +1,124 @@
+.categories {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.categories-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 30px;
+}
+.categories-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+.c-style1 {
+    grid-row: 1 / span 2;
+}
+.c-style2 {
+    min-height: 304.5px;
+}
+.c-style3 {
+    grid-column: 2 / span 2;
+}
+.category-box {
+    position: relative;
+    overflow: hidden;
+}
+.category-box:hover img {
+    transform: scale(1.08);
+}
+.category-box:hover .box-overlay {
+    opacity: 1;
+}
+.box-overlay {
+    opacity: 0.3;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #22222261;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.category-info {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    color: white;
+}
+.c-style1 .big-text {
+    font-size: 35vw;
+    text-align: center;
+    color: #1976d2a3;
+    position: absolute;
+    width: 100%;
+    transition: 0.7s;
+    bottom: -50px;
+}
+.c-style1 .category-title {
+    font-size: 4vw;
+    position: absolute;
+    left: 0;
+    bottom: 40%;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+}
+.c-style1:hover .big-text {
+    font-size: 25vw;
+}
+.c-style1:hover .category-title {
+    bottom: 10%;
+}
+.c-style2 .category-info {
+    padding: 20px;
+}
+.c-style2 .category-info h1 {
+    font-weight: 400;
+    font-size: 32px;
+}
+.c-style2 .category-info h2 {
+    font-size: 55px;
+    font-weight: 700;
+    margin-top: -15px;
+}
+button.category-btn {
+    border: none;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    background: white;
+    border: 2px solid white;
+    mix-blend-mode: lighten;
+    transition: 0.5s;
+}
+button.category-btn:hover {
+    background-color: transparent;
+    color: white;
+}
+.c-style2 .category-info {
+    bottom: -170px;
+    transition: 0.7s;
+}
+.c-style2:hover .category-info {
+    bottom: -85px;
+}
+.c-style3 h1 {
+    font-size: 70px;
+    text-transform: uppercase;
+    margin-bottom: -20px;
+}
+.c-style3 .category-info {
+    padding: 25px;
+    top: 110px;
+    transition: 0.7s;
+}
+.c-style3 .category-info:hover {
+    top: 40px;
+}
