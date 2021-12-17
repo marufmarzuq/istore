@@ -93,3 +93,11 @@ export const newProducts = [
         price: "30",
     },
 ];
+export const singleProduct = {
+    img: "https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
+    name: "New name",
+    shortDesc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quia fuga fugit quibusdam minus et commodi eligendi",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quia fuga fugit quibusdam minus et commodi eligendi Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quia fuga fugit quibusdam minus et commodi eligendi Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quia fuga fugit quibusdam minus et commodi eligendi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quia fuga fugit quibusdam minus et commodi eligendi Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quia fuga fugit quibusdam minus et commodi eligendi Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quia fuga fugit quibusdam minus et commodi eligendi.",
+    price: "30",
+};
