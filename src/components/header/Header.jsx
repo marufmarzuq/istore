@@ -11,7 +11,7 @@ const Header = () => {
             <div className="container">
                 <div className="toggle">
                     <span>
-                        <MenuIcon />
+                        <MenuIcon fontSize="medium" />
                     </span>
                 </div>
                 <div className="logo">
