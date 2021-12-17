@@ -1,5 +1,6 @@
 .cover > .container {
     max-width: 1400px;
+    padding: 0;
 }
 .slider-container {
     width: 100%;

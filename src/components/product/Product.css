@@ -26,12 +26,21 @@
     background-color: #0006;
     transition: 0.4s;
 }
+.product-action-btns > div {
+    display: flex;
+}
 .product-action-btns a {
     color: #ddd;
     padding: 3px;
     margin: 0 5px;
     transition: 0.3s;
-    display: inline-block;
+    background: #4c4c4cd1;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .product-action-btns a:hover {
     color: white;
@@ -44,4 +53,5 @@
     display: flex;
     justify-content: space-between;
     padding: 5px 10px;
+    color: #555;
 }
