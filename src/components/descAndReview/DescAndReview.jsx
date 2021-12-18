@@ -13,7 +13,7 @@ const DescAndReview = ({ desc }) => {
                         </Badge>
                     </p>
                 </div>
-                <div className="desc-review-content">{desc}</div>
+                <p className="desc-review-content">{desc}</p>
             </div>
         </section>
     );

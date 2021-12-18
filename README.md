@@ -1,1 +1,1 @@
-# iStore
+# iStore (Ecommerce)
