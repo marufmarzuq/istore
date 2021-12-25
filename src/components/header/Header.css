@@ -11,6 +11,11 @@ header .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.toggle {
+    padding-top: 7px;
 }
 .logo {
     text-align: center;
