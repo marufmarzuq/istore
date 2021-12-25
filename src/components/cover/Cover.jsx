@@ -35,7 +35,9 @@ const Cover = () => {
                                                 <h1 className="slider-title">{slider.title}</h1>
                                                 <h2 className="slider-big-text">{slider.bigText}</h2>
                                                 <p className="slider-desc">{slider.desc}</p>
-                                                <button className="cover-btn">Shop Now</button>
+                                                <button className="cover-btn" style={{ color: `${slider.bg}` }}>
+                                                    Shop Now
+                                                </button>
                                             </div>
                                         </div>
                                         <div className="slider-right">
