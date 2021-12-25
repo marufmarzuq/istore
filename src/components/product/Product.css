@@ -55,3 +55,10 @@
     padding: 5px 10px;
     color: #555;
 }
+@media (max-width: 500px) {
+    .product-img {
+        width: unset;
+        height: 100%;
+        max-width: 100%;
+    }
+}

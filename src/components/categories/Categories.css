@@ -4,7 +4,7 @@
 }
 .categories-container {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
 }
 .categories-container img {
@@ -14,13 +14,11 @@
     transition: 1s;
 }
 .c-style1 {
-    grid-row: 1 / span 2;
+    height: 320px;
 }
 .c-style2 {
-    min-height: 304.5px;
-}
-.c-style3 {
-    grid-column: 2 / span 2;
+    height: 320px;
+    grid-column: 1 / span 2;
 }
 .category-box {
     position: relative;
@@ -50,42 +48,27 @@
     left: 0;
     color: white;
 }
-.c-style1 .big-text {
-    font-size: 35vw;
-    text-align: center;
-    color: #1976d2a3;
-    position: absolute;
-    width: 100%;
-    transition: 0.7s;
-    bottom: -50px;
-}
-.c-style1 .category-title {
-    font-size: 4vw;
-    position: absolute;
-    left: 0;
-    bottom: 40%;
-    text-align: center;
-    width: 100%;
-    transition: 0.5s;
-}
-.c-style1:hover .big-text {
-    font-size: 25vw;
-}
-.c-style1:hover .category-title {
-    bottom: 10%;
-}
-.c-style2 .category-info {
+.c-style1 .category-info {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 }
-.c-style2 .category-info h1 {
-    font-weight: 400;
-    font-size: 32px;
+.category-info.right {
+    align-items: flex-start;
 }
-.c-style2 .category-info h2 {
+.c-style1 .category-info h1 {
     font-size: 55px;
     font-weight: 700;
     margin-top: -15px;
+    text-transform: uppercase;
 }
+.c-style1 .category-info h2 {
+    font-weight: 400;
+    font-size: 32px;
+}
+
 button.category-btn {
     border: none;
     padding: 15px 35px;
@@ -102,23 +85,58 @@ button.category-btn:hover {
     background-color: transparent;
     color: white;
 }
-.c-style2 .category-info {
-    bottom: -170px;
-    transition: 0.7s;
-}
-.c-style2:hover .category-info {
-    bottom: -85px;
-}
-.c-style3 h1 {
-    font-size: 70px;
+.c-style2 h1 {
+    font-size: 80px;
     text-transform: uppercase;
     margin-bottom: -20px;
+    transition: 0.5s;
 }
-.c-style3 .category-info {
-    padding: 25px;
-    top: 110px;
+.c-style2 .category-info h2 {
+    border-left: 5px solid #e96a6a;
+    padding: 5px 17px;
+    text-transform: uppercase;
+    font-size: 35px;
+}
+.c-style2 .category-info {
+    padding: 40px;
     transition: 0.7s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
 }
-.c-style3 .category-info:hover {
-    top: 40px;
+.c-style2 .category-info:hover h1 {
+    transform: translateX(20px);
+}
+
+@media (max-width: 850px) {
+    .categories-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+}
+@media (max-width: 550px) {
+    .c-style1 .category-info {
+        align-items: flex-start;
+    }
+    .categories-container {
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+    }
+    .c-style2 {
+        grid-column: 1 / span 1;
+    }
+    .c-style2 .category-info h2 {
+        font-size: 22px;
+    }
+    .c-style1 .category-info h1 {
+        font-size: 45px;
+    }
+    .c-style1 .category-info h2 {
+        font-size: 25px;
+    }
+    button.category-btn {
+        padding: 10px 25px;
+    }
 }

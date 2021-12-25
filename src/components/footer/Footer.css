@@ -22,3 +22,18 @@ footer a:hover {
 span.copyright a {
     padding: 0;
 }
+
+@media (max-width: 850px) {
+    footer .container {
+        display: block;
+    }
+}
+@media (max-width: 550px) {
+    footer a {
+        display: block;
+        padding: 7px 10px;
+    }
+    span.copyright {
+        display: none;
+    }
+}

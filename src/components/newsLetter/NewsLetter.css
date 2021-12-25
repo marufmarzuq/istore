@@ -28,3 +28,11 @@ button.newsletter-btn {
     background-color: #333;
     color: white;
 }
+@media (max-width: 500px) {
+    .n-input-container input[type="email"] {
+        width: calc(100% - 73px);
+    }
+    button.newsletter-btn {
+        padding: 5px 20px;
+    }
+}
