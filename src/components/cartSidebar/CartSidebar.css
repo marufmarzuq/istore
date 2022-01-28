@@ -1,0 +1,114 @@
+.cart-sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100000;
+    width: 100%;
+    max-width: 400px;
+    background-color: #333333;
+    height: 100%;
+    color: white;
+}
+
+.cart-sidebar-container {
+    padding: 0 30px;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 80px auto 170px;
+}
+
+.cart-sidebar-header {
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid #464646;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    z-index: 10000000;
+}
+
+.cart-sidebar-header svg {
+    font-size: 37px;
+    color: #b9b9b9;
+    cursor: pointer;
+}
+.cart-sidebar-scrollable-container {
+    height: calc(100vh - 250px);
+    overflow-y: auto;
+}
+.cart-sidebar-scrollable-container::-webkit-scrollbar {
+    display: none;
+}
+.cart-sidebar-single-product {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid #464646;
+}
+.cart-sidebar-single-product:last-child {
+    border: none;
+}
+.cart-sidebar-product-img {
+    height: 70px;
+    width: 70px;
+    overflow: hidden;
+    background-color: #464646;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.cart-sidebar-product-img img {
+    width: 100%;
+}
+.cart-sidebar-product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 0 5px 10px;
+}
+.cart-sidebar-product-quantity-container {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 200;
+    font-size: 15px;
+}
+.cart-sidebar-product-name-container {
+    display: flex;
+    justify-content: space-between;
+}
+.cart-sidebar-product-name-container svg {
+    cursor: pointer;
+}
+
+.cart-sidebar-footer {
+    width: 100%;
+    background-color: #333333;
+}
+.cart-subtotal {
+    border-top: 1px solid #464646;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 200;
+}
+.cart-update-btn {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 200;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border: 1px solid #464646;
+}
+.cart-chekout-btn {
+    background-color: #111;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 200;
+}
