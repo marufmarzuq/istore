@@ -1,51 +1,73 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CartSidebar.css";
 import { cartProducts } from "../../data";
 import CloseIcon from "@mui/icons-material/Close";
+import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 const CartSidebar = () => {
-    console.log();
+    const [activeCartModal, setActiveCartModal] = useState(true);
+    document.onclick = (e) => {
+        if (e.target.className === "cart-modal-overlay true") {
+            setActiveCartModal(false);
+        }
+    };
     return (
-        <div className="cart-sidebar">
-            <div className="cart-sidebar-container">
-                <div className="cart-sidebar-header">
-                    <CloseIcon />
-                </div>
-                <div className="cart-sidebar-scrollable-container">
-                    {cartProducts.map((product) => {
-                        return (
-                            <div className="cart-sidebar-single-product">
-                                <div className="cart-sidebar-product-img">
-                                    <img src={product.img} alt="" />
-                                </div>
-                                <div className="cart-sidebar-product-details">
-                                    <div className="cart-sidebar-product-name-container">
-                                        <span>{product.name}</span>
-                                        <CloseIcon />
-                                    </div>
-                                    <div className="cart-sidebar-product-quantity-container">
-                                        <span>{product.quantity}</span>
-                                        <span>${product.price}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
-                <div className="cart-sidebar-footer">
-                    <div className="cart-subtotal">
-                        <span>Subtotal:</span>
-                        <span>$793.00</span>
+        <>
+            <div className={`cart-modal-overlay ${activeCartModal}`}></div>
+            <div className={`cart-sidebar ${activeCartModal}`}>
+                <div className="cart-sidebar-container">
+                    <div className="cart-sidebar-header" onClick={() => setActiveCartModal(false)}>
+                        <CloseIcon />
                     </div>
-                    <div className="cart-update-btn">
-                        <span>Update Cart</span>
+                    <div className="cart-sidebar-scrollable-container">
+                        {cartProducts.map((product) => {
+                            return (
+                                <div className="cart-sidebar-single-product">
+                                    <div className="cart-sidebar-product-img">
+                                        <img src={product.img} alt="" />
+                                    </div>
+                                    <div className="cart-sidebar-product-details">
+                                        <div className="cart-sidebar-product-name-container">
+                                            <span>{product.name}</span>
+                                            <CloseIcon />
+                                        </div>
+                                        <div className="cart-sidebar-product-quantity-container">
+                                            <div className="product-quantity-container">
+                                                <span>Qty</span>
+                                                <div className="product-quantity-btns">
+                                                    <span>
+                                                        <ArrowLeftIcon />
+                                                    </span>
+                                                    <input type="number" value={product.quantity} />
+                                                    <span>
+                                                        <ArrowRightIcon />
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            <span>${product.price}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        })}
                     </div>
-                    <div className="cart-chekout-btn">
-                        <span>Checkout</span>
+                    <div className="cart-sidebar-footer">
+                        <div className="cart-subtotal">
+                            <span>Subtotal:</span>
+                            <span>$793.00</span>
+                        </div>
+                        <div className="cart-update-btn">
+                            <span>Update Cart</span>
+                        </div>
+                        <div className="cart-chekout-btn">
+                            <span>Checkout</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
