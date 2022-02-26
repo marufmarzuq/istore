@@ -1,5 +1,4 @@
 import "./DescAndReview.css";
-import Badge from "@mui/material/Badge";
 
 const DescAndReview = ({ desc }) => {
     return (
@@ -7,10 +6,7 @@ const DescAndReview = ({ desc }) => {
             <div className="container">
                 <div className="desc-review-tab-container">
                     <p>
-                        <span className="active">Description</span> |{" "}
-                        <Badge badgeContent={1} color="info">
-                            <span>Review</span>
-                        </Badge>
+                        <span className="active">Description</span> | <span>Review</span>
                     </p>
                 </div>
                 <p className="desc-review-content">{desc}</p>

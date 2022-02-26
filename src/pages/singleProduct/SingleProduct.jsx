@@ -1,8 +1,6 @@
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
-import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import Footer from "../../components/footer/Footer";
-import Header from "../../components/header/Header";
+import { IoMdArrowDropright } from "react-icons/io";
+import { IoMdArrowDropleft } from "react-icons/io";
+import { HiOutlineHeart } from "react-icons/hi";
 import { singleProduct } from "../../data";
 import "./SingleProduct.css";
 import DescAndReview from "../../components/descAndReview/DescAndReview";
@@ -11,7 +9,6 @@ const SingleProduct = () => {
     const { name, img, price, shortDesc, desc } = singleProduct;
     return (
         <div className="single-product">
-            <Header />
             <section className="single-product-section">
                 <div className="container single-product-container">
                     <div className="single-product-img-container">
@@ -21,7 +18,7 @@ const SingleProduct = () => {
                         <div className="atc-name-heart">
                             <h2 className="product-name">{name}</h2>
                             <span>
-                                <FavoriteBorderOutlinedIcon />
+                                <HiOutlineHeart />
                             </span>
                         </div>
                         <p className="product-price">${price}</p>
@@ -29,11 +26,11 @@ const SingleProduct = () => {
                         <div className="quantity-and-btn">
                             <div className="product-quantity">
                                 <span>
-                                    <ArrowLeftIcon fontSize="large" />
+                                    <IoMdArrowDropleft />
                                 </span>
                                 <input type="number" defaultValue="1" />
                                 <span>
-                                    <ArrowRightIcon fontSize="large" />
+                                    <IoMdArrowDropright />
                                 </span>
                             </div>
                             <button className="add-to-cart">Add to cart</button>
@@ -42,7 +39,6 @@ const SingleProduct = () => {
                 </div>
             </section>
             <DescAndReview desc={desc} />
-            <Footer />
         </div>
     );
 };

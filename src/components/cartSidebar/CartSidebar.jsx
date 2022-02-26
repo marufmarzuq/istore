@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./CartSidebar.css";
 import { cartProducts } from "../../data";
-import CloseIcon from "@mui/icons-material/Close";
-import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import { VscChromeClose } from "react-icons/vsc";
+import { IoMdArrowDropright } from "react-icons/io";
+import { IoMdArrowDropleft } from "react-icons/io";
 
 const CartSidebar = () => {
     const [activeCartModal, setActiveCartModal] = useState(true);
@@ -18,7 +18,7 @@ const CartSidebar = () => {
             <div className={`cart-sidebar ${activeCartModal}`}>
                 <div className="cart-sidebar-container">
                     <div className="cart-sidebar-header" onClick={() => setActiveCartModal(false)}>
-                        <CloseIcon />
+                        <VscChromeClose />
                     </div>
                     <div className="cart-sidebar-scrollable-container">
                         {cartProducts.map((product) => {
@@ -30,18 +30,18 @@ const CartSidebar = () => {
                                     <div className="cart-sidebar-product-details">
                                         <div className="cart-sidebar-product-name-container">
                                             <span>{product.name}</span>
-                                            <CloseIcon />
+                                            <VscChromeClose />
                                         </div>
                                         <div className="cart-sidebar-product-quantity-container">
                                             <div className="product-quantity-container">
                                                 <span>Qty</span>
                                                 <div className="product-quantity-btns">
                                                     <span>
-                                                        <ArrowLeftIcon />
+                                                        <IoMdArrowDropleft />
                                                     </span>
                                                     <input type="number" value={product.quantity} />
                                                     <span>
-                                                        <ArrowRightIcon />
+                                                        <IoMdArrowDropright />
                                                     </span>
                                                 </div>
                                             </div>

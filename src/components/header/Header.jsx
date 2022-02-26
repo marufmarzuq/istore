@@ -1,22 +1,23 @@
 import "./Header.css";
 import { useState } from "react";
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
-import CloseIcon from "@mui/icons-material/Close";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import MenuIcon from "@mui/icons-material/Menu";
-import Badge from "@mui/material/Badge";
 import HeaderMenu from "../headerMenu/HeaderMenu";
+import { HiOutlineHeart } from "react-icons/hi";
+import { HiOutlineShoppingCart } from "react-icons/hi";
+import { HiOutlineUserCircle } from "react-icons/hi";
+import { HiOutlineMenuAlt1 } from "react-icons/hi";
+import { VscChromeClose } from "react-icons/vsc";
+import { HiHeart } from "react-icons/hi";
+import { MdOutlineNightsStay } from "react-icons/md";
 
-const Header = () => {
+const Header = ({ handleTheme, darkTheme }) => {
     const [menuStatus, setMenuStatus] = useState(false);
 
     return (
-        <header>
+        <header style={darkTheme ? { backgroundColor: "#333", color: "white" } : { backgroundColor: "white" }}>
             <div className="container">
                 <div className="toggle">
                     <span onClick={() => setMenuStatus(!menuStatus)}>
-                        {!menuStatus ? <MenuIcon fontSize="medium" /> : <CloseIcon fontSize="medium" />}
+                        {!menuStatus ? <HiOutlineMenuAlt1 /> : <VscChromeClose />}
                     </span>
                 </div>
                 {menuStatus ? (
@@ -28,20 +29,24 @@ const Header = () => {
                         </div>
                         <nav>
                             <div className="nav-item">
-                                <span>
-                                    <FavoriteBorderOutlinedIcon />
+                                <span onClick={handleTheme}>
+                                    <MdOutlineNightsStay />
                                 </span>
                             </div>
                             <div className="nav-item">
                                 <span>
-                                    <Badge badgeContent={4} color="primary">
-                                        <ShoppingCartOutlinedIcon />
-                                    </Badge>
+                                    <HiOutlineHeart />
                                 </span>
+                            </div>
+                            <div className="nav-item shopping-cart">
+                                <span>
+                                    <HiOutlineShoppingCart />
+                                </span>
+                                <div className="shopping-cart-badge">{5}</div>
                             </div>
                             <div className="nav-item">
                                 <span>
-                                    <AccountCircleOutlinedIcon />
+                                    <HiOutlineUserCircle />
                                 </span>
                             </div>
                         </nav>

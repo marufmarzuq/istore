@@ -1,6 +1,6 @@
 import "./Cover.css";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { BsChevronRight } from "react-icons/bs";
+import { BsChevronLeft } from "react-icons/bs";
 import { sliders } from "../../data";
 import { useState } from "react";
 
@@ -19,10 +19,10 @@ const Cover = () => {
                 <div className="slider-container">
                     <div className="arrows">
                         <div className="left-arrow" onClick={() => handleArrow("left")}>
-                            <ArrowBackIosIcon fontSize="large" />
+                            <BsChevronLeft />
                         </div>
                         <div className="right-arrow" onClick={() => handleArrow("right")}>
-                            <ArrowForwardIosIcon fontSize="large" />
+                            <BsChevronRight />
                         </div>
                     </div>
                     <div className="slider-wrapper" style={{ transform: `translateX(${sliderIndex * -100}%)` }}>

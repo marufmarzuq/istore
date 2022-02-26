@@ -1,8 +1,8 @@
 import React from "react";
 import "./Product.css";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import SearchIcon from "@mui/icons-material/Search";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import { HiOutlineHeart } from "react-icons/hi";
+import { HiOutlineShoppingCart } from "react-icons/hi";
+import { CgSearch } from "react-icons/cg";
 
 const Product = ({ product }) => {
     const { img, name, price } = product;
@@ -13,13 +13,13 @@ const Product = ({ product }) => {
                 <div className="product-action-btns">
                     <div>
                         <a href="#">
-                            <FavoriteBorderIcon fontSize="medium" />
+                            <HiOutlineHeart />
                         </a>
                         <a href="#">
-                            <SearchIcon fontSize="medium" />
+                            <CgSearch />
                         </a>
                         <a href="#">
-                            <ShoppingCartOutlinedIcon fontSize="medium" />
+                            <HiOutlineShoppingCart />
                         </a>
                     </div>
                 </div>

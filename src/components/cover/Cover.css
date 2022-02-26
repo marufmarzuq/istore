@@ -24,12 +24,15 @@
     padding: 0 10px;
     transition: 0.3s;
     z-index: 2;
+    font-size: 55px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    transition: 0.3s;
 }
 .arrows > div:hover {
     color: white;
-}
-.left-arrow {
-    margin-left: 9px;
+    background-color: #00000008;
 }
 .slider-wrapper {
     width: 100%;
@@ -96,8 +99,15 @@ button.cover-btn {
     .slider-left {
         background-color: #0000008c;
     }
+    .arrows > div:hover {
+        background-color: none;
+    }
 }
 @media (max-width: 500px) {
+    .arrows > div {
+        font-size: 30px;
+        height: 40px;
+    }
     .arrows {
         justify-content: center;
         align-items: flex-end;

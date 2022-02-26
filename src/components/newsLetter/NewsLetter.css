@@ -6,15 +6,15 @@ section.newsletter {
     padding-bottom: 5px;
 }
 .n-input-container {
-    max-width: 600px;
+    max-width: 500px;
     display: flex;
     align-items: center;
-    border: 2px solid #333;
+    border: 1px solid #333;
     margin: 30px auto;
 }
 .n-input-container input[type="email"] {
     width: calc(100% - 85px);
-    padding: 15px 25px;
+    padding: 12px 25px;
     font-size: 16px;
     border: none;
 }
@@ -22,11 +22,13 @@ section.newsletter {
     outline: none;
 }
 button.newsletter-btn {
-    padding: 5px 35px;
+    padding: 5px 30px;
     border: none;
     cursor: pointer;
     background-color: #333;
     color: white;
+    font-size: 34px;
+    display: flex;
 }
 @media (max-width: 500px) {
     .n-input-container input[type="email"] {

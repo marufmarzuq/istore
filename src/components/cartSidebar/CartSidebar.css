@@ -50,7 +50,7 @@
     color: #fff;
 }
 .cart-sidebar-header svg {
-    font-size: 37px;
+    font-size: 30px;
     color: #b9b9b9;
     transition: 0.3s;
 }
@@ -103,16 +103,16 @@
 }
 .product-quantity-container > span {
     display: block;
-    margin-bottom: 2px;
 }
 .product-quantity-btns {
     display: flex;
 }
 
 .product-quantity-btns span {
-    display: flex;
     cursor: pointer;
     color: #ddd;
+    font-size: 22px;
+    display: flex;
 }
 
 .product-quantity-btns input {
@@ -122,7 +122,6 @@
     background-color: transparent;
     border: none;
     color: #ddd;
-    margin-top: 2px;
 }
 .product-quantity-btns input:focus {
     outline: none;
@@ -135,6 +134,7 @@
 }
 .cart-sidebar-product-name-container svg {
     cursor: pointer;
+    font-size: 20px;
 }
 
 .cart-sidebar-footer {

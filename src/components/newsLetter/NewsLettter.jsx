@@ -1,7 +1,7 @@
 import React from "react";
 import "./NewsLetter.css";
 import bg from "../../assets/images/bg-white-dotted.webp";
-import SendIcon from "@mui/icons-material/Send";
+import { IoIosSend } from "react-icons/io";
 
 const NewsLettter = () => {
     return (
@@ -12,7 +12,7 @@ const NewsLettter = () => {
                 <div className="n-input-container">
                     <input type="email" placeholder="Enter Your Email" />
                     <button className="newsletter-btn">
-                        <SendIcon fontSize="large" />
+                        <IoIosSend />
                     </button>
                 </div>
             </div>

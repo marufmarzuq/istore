@@ -41,6 +41,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 22px;
 }
 .product-action-btns a:hover {
     color: white;
