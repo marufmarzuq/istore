@@ -6,7 +6,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 import { IoMdArrowDropleft } from "react-icons/io";
 
 const CartSidebar = () => {
-  const [activeCartModal, setActiveCartModal] = useState(false);
+  const [activeCartModal, setActiveCartModal] = useState(true);
   document.onclick = (e) => {
     if (e.target.className === "cart-modal-overlay true") {
       setActiveCartModal(false);
