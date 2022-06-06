@@ -1,6 +1,6 @@
 import { OPEN } from "../consts/cartTypes";
 const initialState = {
-  openCart: false
+  openCart: false,
 };
 
 const openCartReducer = (state = initialState, action) => {
