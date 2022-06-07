@@ -10,11 +10,6 @@ const openCartReducer = (state = initialState, action) => {
         ...state,
         openCart: true,
       };
-    case CLOSE:
-      return {
-        ...state,
-        openCart: false,
-      };
 
     default:
       return state;
