@@ -5,12 +5,12 @@ import Products from "../../components/products/Products";
 import "./Shop.css";
 
 const Shop = () => {
-    return (
-        <div className="shop">
-            <Products />
-            <NewsLettter />
-        </div>
-    );
+  return (
+    <div className="shop">
+      {/* <Products /> */}
+      <NewsLettter />
+    </div>
+  );
 };
 
 export default Shop;
