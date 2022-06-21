@@ -11,8 +11,8 @@ const openCartReducer = (state = initialState, action) => {
         openCart: true,
       };
 
-    // default:
-    //   return state;
+    default:
+      return state;
   }
 };
 
