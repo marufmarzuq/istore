@@ -5,5 +5,10 @@ const cartOpen = () => {
     type: OPEN,
   };
 };
+const cartClose = () => {
+  return {
+    type: OPEN,
+  };
+};
 
-export default cartOpen;
+export { cartClose, cartOpen };
