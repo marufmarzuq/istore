@@ -8,9 +8,9 @@ import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { VscChromeClose } from "react-icons/vsc";
 
 const Header = (props) => {
-  const { toggleCart } = props;
+  const { toggleCart, toggleAuthModal } = props;
   const [menuStatus, setMenuStatus] = useState();
-
+  console.log("header", props);
   return (
     <header>
       <div className="container">
@@ -41,7 +41,7 @@ const Header = (props) => {
                 </div>
               </div>
               <div className="nav-item">
-                <span>
+                <span onClick={toggleAuthModal}>
                   <HiOutlineUserCircle />
                 </span>
               </div>
