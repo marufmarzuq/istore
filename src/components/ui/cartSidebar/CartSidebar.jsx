@@ -1,26 +1,23 @@
 import React, { useState } from "react";
 import "./CartSidebar.css";
-import { cartProducts } from "../../data";
+import { cartProducts } from "../../utils/data";
 import { VscChromeClose } from "react-icons/vsc";
 import { IoMdArrowDropright } from "react-icons/io";
 import { IoMdArrowDropleft } from "react-icons/io";
 
-const CartSidebar = () => {
-  const [activeCartModal, setActiveCartModal] = useState(true);
+const CartSidebar = (props) => {
+  const { toggleCart, cart } = props;
   document.onclick = (e) => {
     if (e.target.className === "cart-modal-overlay true") {
-      setActiveCartModal(false);
+      if (cart.openCart) toggleCart();
     }
   };
   return (
     <>
-      <div className={`cart-modal-overlay ${activeCartModal}`}></div>
-      <div className={`cart-sidebar ${activeCartModal}`}>
+      <div className={`cart-modal-overlay ${cart.openCart}`}></div>
+      <div className={`cart-sidebar ${cart.openCart}`}>
         <div className="cart-sidebar-container">
-          <div
-            className="cart-sidebar-header"
-            onClick={() => setActiveCartModal(false)}
-          >
+          <div className="cart-sidebar-header" onClick={toggleCart}>
             <VscChromeClose />
           </div>
           <div className="cart-sidebar-scrollable-container">

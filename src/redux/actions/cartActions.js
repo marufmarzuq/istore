@@ -1,14 +1,10 @@
-import { OPEN } from "../consts/cartTypes";
+import { TOGGLE_CART } from "../consts/cartTypes";
 
-const cartOpen = () => {
+const toggleCart = () => {
+  console.log("Clicked");
   return {
-    type: OPEN,
-  };
-};
-const cartClose = () => {
-  return {
-    type: OPEN,
+    type: TOGGLE_CART,
   };
 };
 
-export { cartClose, cartOpen };
+export { toggleCart };

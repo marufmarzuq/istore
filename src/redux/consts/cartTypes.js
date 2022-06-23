@@ -1,2 +1,1 @@
-export const OPEN = "OPEN";
-export const CLOSE = "CLOSE";
+export const TOGGLE_CART = "TOGGLE_CART";

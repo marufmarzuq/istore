@@ -1,3 +1,4 @@
-import openCartReducer from "./cartReducers";
+import { combineReducers } from "redux";
+import cart from "./cartReducers";
 
-export default openCartReducer;
+export default combineReducers({ cart });

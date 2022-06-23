@@ -1,14 +1,16 @@
-import { OPEN } from "../consts/cartTypes";
+import { TOGGLE_CART } from "../consts/cartTypes";
 const initialState = {
   openCart: false,
+  totalItem: 0,
+  items: [],
 };
 
-const openCartReducer = (state = initialState, action) => {
+const cart = (state = initialState, action) => {
   switch (action.type) {
-    case OPEN:
+    case TOGGLE_CART:
       return {
         ...state,
-        openCart: true,
+        openCart: !state.openCart,
       };
 
     default:
@@ -16,4 +18,4 @@ const openCartReducer = (state = initialState, action) => {
   }
 };
 
-export default openCartReducer;
+export default cart;
