@@ -24,6 +24,7 @@
   overflow-y: auto;
   animation: modalAnimation 0.5s forwards;
 }
+
 @keyframes modalAnimation {
   0% {
     transform: translateY(-50px);
