@@ -6,11 +6,13 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { VscChromeClose } from "react-icons/vsc";
+import { useDispatch } from "react-redux";
+import { toggleAuth, toggleCart } from "../../setup/slices/headerSlice";
 
-const Header = (props) => {
-  const { toggleCart, toggleAuthModal } = props;
+const Header = () => {
   const [menuStatus, setMenuStatus] = useState();
-  console.log("header", props);
+  const dispatch = useDispatch();
+
   return (
     <header>
       <div className="container">
@@ -33,15 +35,18 @@ const Header = (props) => {
                 </span>
               </div>
               <div className="nav-item shopping-cart">
-                <span onClick={toggleCart}>
+                <span onClick={() => dispatch(toggleCart())}>
                   <HiOutlineShoppingCart />
                 </span>
-                <div className="shopping-cart-badge" onClick={toggleCart}>
+                <div
+                  className="shopping-cart-badge"
+                  onClick={() => dispatch(toggleCart())}
+                >
                   {5}
                 </div>
               </div>
               <div className="nav-item">
-                <span onClick={toggleAuthModal}>
+                <span onClick={() => dispatch(toggleAuth())}>
                   <HiOutlineUserCircle />
                 </span>
               </div>

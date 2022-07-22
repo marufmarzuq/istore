@@ -4,20 +4,27 @@ import { cartProducts } from "../../utils/data";
 import { VscChromeClose } from "react-icons/vsc";
 import { IoMdArrowDropright } from "react-icons/io";
 import { IoMdArrowDropleft } from "react-icons/io";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleCart } from "../../setup/slices/headerSlice";
 
-const CartSidebar = (props) => {
-  const { toggleCart, cart } = props;
+const CartSidebar = () => {
+  const { cartOpen } = useSelector((state) => state.header);
+  const dispatch = useDispatch();
+
   document.onclick = (e) => {
     if (e.target.className === "cart-modal-overlay true") {
-      if (cart.openCart) toggleCart();
+      if (cartOpen) dispatch(toggleCart());
     }
   };
   return (
     <>
-      <div className={`cart-modal-overlay ${cart.openCart}`}></div>
-      <div className={`cart-sidebar ${cart.openCart}`}>
+      <div className={`cart-modal-overlay ${cartOpen}`}></div>
+      <div className={`cart-sidebar ${cartOpen}`}>
         <div className="cart-sidebar-container">
-          <div className="cart-sidebar-header" onClick={toggleCart}>
+          <div
+            className="cart-sidebar-header"
+            onClick={() => dispatch(toggleCart())}
+          >
             <VscChromeClose />
           </div>
           <div className="cart-sidebar-scrollable-container">

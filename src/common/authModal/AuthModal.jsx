@@ -1,17 +1,19 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleAuth } from "../../setup/slices/headerSlice";
 import "./AuthModal.css";
 import Login from "./Login";
 import Register from "./Register";
 
-const AuthModal = (props) => {
-  const { auth, toggleAuthModal } = props;
+const AuthModal = () => {
+  const { authOpen } = useSelector((state) => state.header);
+  const dispatch = useDispatch();
   const [activeTab, setActiveTab] = useState("login");
-  const [active, setActive] = useState(true);
-  console.log(props);
+
   return (
     <div
-      className={`auth-modal ${auth.openAuthModal}`}
-      onClick={toggleAuthModal}
+      className={`auth-modal ${authOpen}`}
+      onClick={() => dispatch(toggleAuth())}
     >
       <div
         className="auth-modal-container"
