@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./CartSidebar.css";
 import { cartProducts } from "../../utils/data";
 import { VscChromeClose } from "react-icons/vsc";
@@ -16,6 +16,13 @@ const CartSidebar = () => {
       if (cartOpen) dispatch(toggleCart());
     }
   };
+  useEffect(() => {
+    if (cartOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [cartOpen]);
   return (
     <>
       <div className={`cart-modal-overlay ${cartOpen}`}></div>

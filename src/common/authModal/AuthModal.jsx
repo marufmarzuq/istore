@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleAuth } from "../../setup/slices/headerSlice";
 import "./AuthModal.css";
@@ -9,6 +9,14 @@ const AuthModal = () => {
   const { authOpen } = useSelector((state) => state.header);
   const dispatch = useDispatch();
   const [activeTab, setActiveTab] = useState("login");
+
+  useEffect(() => {
+    if (authOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [authOpen]);
 
   return (
     <div

@@ -1,3 +1,7 @@
+body.auth-modal {
+  overflow: hidden;
+}
+
 .auth-modal {
   position: fixed;
   top: 0;
