@@ -1,6 +1,6 @@
 import React from "react";
 import "./NewsLetter.css";
-import bg from "../../../assets/images/bg-white-dotted.webp";
+import bg from "../../assets/images/bg-white-dotted.webp";
 import { IoIosSend } from "react-icons/io";
 
 const NewsLettter = () => {

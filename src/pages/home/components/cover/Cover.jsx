@@ -1,8 +1,8 @@
+import { useState } from "react";
 import "./Cover.css";
 import { BsChevronRight } from "react-icons/bs";
 import { BsChevronLeft } from "react-icons/bs";
-import { sliders } from "../../utils/data";
-import { useState } from "react";
+import { sliders } from "../../../../utils/data";
 
 const Cover = () => {
   const [sliderIndex, setSliderIndex] = useState(0);

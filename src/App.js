@@ -1,8 +1,7 @@
 import React from "react";
-import "./App.css";
 import { Provider } from "react-redux";
-import store from "./redux/store/store";
-import Router from "./components/router/Router";
+import store from "./setup/store";
+import Router from "./setup/router";
 
 const App = () => {
   return (
