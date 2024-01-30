@@ -1,7 +1,7 @@
 import React from "react";
-import NewsLettter from "../../ui/newsLetter/NewsLettter";
-import Products from "../../ui/products/Products";
 import "./Shop.css";
+import NewsLettter from "../../common/newsLetter/NewsLettter";
+import Products from "../../common/products/Products";
 
 const Shop = () => {
   return (

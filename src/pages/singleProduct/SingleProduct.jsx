@@ -3,7 +3,7 @@ import { IoMdArrowDropleft } from "react-icons/io";
 import { HiOutlineHeart } from "react-icons/hi";
 import { singleProduct } from "../../utils/data";
 import "./SingleProduct.css";
-import DescAndReview from "../../ui/descAndReview/DescAndReview";
+import DescAndReview from "../../common/descAndReview/DescAndReview";
 
 const SingleProduct = () => {
   const { name, img, price, shortDesc, desc } = singleProduct;
